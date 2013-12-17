@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html class="no-js">
   <head>
@@ -14,7 +17,30 @@
 
     <p>test</p>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    {% highlight javascript %}
+    // Default
+    $('#element').cssAnimateAuto();
+
+    // Close the element (or if it's already closed, ignore)
+    $('#element').cssAnimateAuto('close');
+
+    // Use linear easing and fast animation
+    $('#element').cssAnimateAuto('height 0.1s linear');
+
+    // Animate width
+    $('#element').cssAnimateAuto('width 0.3s');
+
+    // Use a callback and pass a couple of options
+    function doThisAfter() {
+      // something you want done
+    }
+    $('#element').cssAnimateAuto({
+      transition: 'width 0.3s steps(4, end)',
+      action: 'close'
+    }, doThisAfter);
+    {% endhighlight %}
+
+    <script src="bower_components/jquery/jquery.js"></script>
     <script src="jquery.cssAnimateAuto.js"></script>
 
   </body>
