@@ -1,0 +1,1 @@
+exclude: [bower_components, node_modules, scss, js, .sass-cache, Gruntfile.coffee, bower.json, package.json, jquery.cssAnimateAuto.js]

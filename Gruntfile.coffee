@@ -8,25 +8,29 @@ module.exports = (grunt) ->
         lineNumbers: true
       style:
         files:
-          "style/css/main.css": "style/scss/main.scss"
+          "dist/main.css": "scss/main.scss"
 
     autoprefixer:
       style:
         files:
-          "style/css/main.css": "style/css/main.css"
+          "dist/main.css": "dist/main.css"
 
     cssmin:
       dist:
         files:
-          "style/css/main.css": "style/css/main.css"
+          "dist/main.css": "dist/main.css"
 
     uglify:
       dist:
-        files: "js/compiled.min.js": [
+        files: "dist/compiled.min.js": [
           "bower_components/jquery/jquery.js"
           "jquery.cssAnimateAuto.js"
           "js/main.js"
         ]
+
+    shell:
+      jekyll:
+        command: 'jekyll build'
 
     connect:
       server:
@@ -40,11 +44,15 @@ module.exports = (grunt) ->
           livereload: true
         files: [
           "index.html"
-          "style/css/*.css"
+          "dist/*.css"
           "js/*.js"
+          "_includes/*"
+        ]
+        tasks: [
+          "shell:jekyll"
         ]
       style:
-        files: ["style/scss/*.scss"]
+        files: ["scss/*.scss"]
         tasks: ["style"]
 
   grunt.loadNpmTasks "grunt-contrib-connect"
@@ -53,6 +61,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-contrib-cssmin"
   grunt.loadNpmTasks "grunt-contrib-uglify"
   grunt.loadNpmTasks "grunt-autoprefixer"
+  grunt.loadNpmTasks "grunt-shell"
 
   grunt.registerTask "dev", [
     "connect"
