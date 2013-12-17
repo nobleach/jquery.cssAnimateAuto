@@ -1,0 +1,24 @@
+$c-primary: lightblue;
+$c-secondary: lightgray;
+
+body {
+  text-align: center;
+}
+
+button {
+  background-color: $c-primary;
+  border-radius: 5px;
+  padding: 0.75em 1em;
+}
+
+.hidden {
+  background-color: $c-secondary;
+  height: 0;
+  overflow: hidden;
+  margin: 1em auto;
+  max-width: 20em;
+}
+
+.hidden-inner {
+  padding: 2em;
+}

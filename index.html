@@ -1,6 +1,3 @@
----
----
-
 <!DOCTYPE html>
 <html class="no-js">
   <head>
@@ -9,39 +6,29 @@
       <title>jquery.cssAnimateAuto</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      <link rel="stylesheet" href="style/css/main.css">
   </head>
   <body>
 
     <h1>jquery.cssAnimateAuto</h1>
 
-    <p>test</p>
+    <p>Click the button to unleash the magic.</p>
+    <p>
+      <button id="btn-1" class="button">button</button>
+    </p>
+    <div id="hidden-1" class="hidden">
+      <div class="hidden-inner">
+        <p>You have unleashed the magic.</p>
+        <p>And it's never going away.</p>
+      </div>
+    </div>
 
-    {% highlight js %}
-    // Default
-    $('#element').cssAnimateAuto();
 
-    // Close the element (or if it's already closed, ignore)
-    $('#element').cssAnimateAuto('close');
 
-    // Use linear easing and fast animation
-    $('#element').cssAnimateAuto('height 0.1s linear');
-
-    // Animate width
-    $('#element').cssAnimateAuto('width 0.3s');
-
-    // Use a callback and pass a couple of options
-    function doThisAfter() {
-      // something you want done
-    }
-    $('#element').cssAnimateAuto({
-      transition: 'width 0.3s steps(4, end)',
-      action: 'close'
-    }, doThisAfter);
-    {% endhighlight %}
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="jquery.cssAnimateAuto.js"></script>
+    <script src="js/main.js"></script>
 
   </body>
 </html>
