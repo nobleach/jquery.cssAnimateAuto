@@ -1,21 +1,78 @@
-$c-primary: lightblue;
-$c-secondary: lightgray;
-
 body {
-  text-align: center;
+  background-color: $c-bg;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  padding: 0 1em 10em;
 }
 
-button {
+.wrapper {
+  @include scut-center-block(40em);
+}
+
+button,
+.btn {
   background-color: $c-primary;
   border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0;
+  font-weight: 800;
   padding: 0.75em 1em;
+  margin-right: 1em;
+  transition: background-color 0.2s linear;
+  @include scut-selected {
+    background-color: $c-tertiary;
+    color: white;
+  }
+}
+
+h1,
+h2 {
+  padding: 0.5em;
+  background-color: $c-quarternary;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 1em;
+}
+
+h2 {
+  margin-top: 2em;
+}
+
+p {
+  line-height: 1.5;
+  &.btn-p {
+    margin-bottom: 1em;
+  }
+}
+
+a {
+  color: white;
+  font-weight: 800;
+  @extend %scut-link-bb;
+  transition: color 0.2s linear;
+  @include scut-selected {
+    color: $c-primary;
+  }
+}
+
+blockquote {
+  margin-left: 0;
+  font-style: italic;
+}
+
+.feature {
+  font-size: 1.3em;
 }
 
 .hidden {
   background-color: $c-secondary;
   height: 0;
   overflow: hidden;
-  margin: 1em auto;
   max-width: 20em;
 }
 
@@ -24,7 +81,11 @@ button {
 }
 
 .highlight {
-  margin: 1em auto;
-  max-width: 30em;
-  text-align: left;
+  @include scut-margin(1em n);
+}
+
+.well {
+  background: $c-secondary;
+  @include scut-margin(1em n);
+  padding: 1em;
 }

@@ -26,11 +26,19 @@ module.exports = (grunt) ->
           "bower_components/jquery/jquery.js"
           "jquery.cssAnimateAuto.js"
           "js/main.js"
+          "_includes/accordion.js"
+          "_includes/dropdown.js"
+        ]
+      plugin:
+        files: "jquery.cssAnimateAuto.min.js": [
+          "jquery.cssAnimateAuto.js"
         ]
 
     shell:
       jekyll:
         command: 'jekyll build'
+      getPlugin:
+        command: 'git checkout master -- jquery.cssAnimateAuto.js'
 
     connect:
       server:
@@ -45,7 +53,7 @@ module.exports = (grunt) ->
         files: [
           "index.html"
           "dist/*.css"
-          "js/*.js"
+          "dist/*.js"
           "_includes/*"
         ]
         tasks: [
@@ -54,6 +62,12 @@ module.exports = (grunt) ->
       style:
         files: ["scss/*.scss"]
         tasks: ["style"]
+      js:
+        files: [
+          "js/*.js"
+          "_includes/*.js"
+        ]
+        tasks: ["uglify:dist"]
 
   grunt.loadNpmTasks "grunt-contrib-connect"
   grunt.loadNpmTasks "grunt-contrib-watch"
@@ -64,6 +78,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-shell"
 
   grunt.registerTask "dev", [
+    "shell:getPlugin"
+    "uglify:plugin"
     "connect"
     "watch"
   ]

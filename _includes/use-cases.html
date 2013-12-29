@@ -1,0 +1,76 @@
+<h2>Use-cases and examples</h2>
+
+<h3>The accordion</h3>
+
+<dl class="accordion">
+  <dt class="accordion-trigger" tabindex="0">Megrim</dt>
+  <dd class="accordion-body hidden">
+    <div class="accordion-body-inner">
+      <p><i>n.</i> A form of headache usually confined to or beginning or predominating on one side of the head.</p>
+      <p><i>n.</i> (plural) Lowness of spirits, as from headache or general physical disturbance; the 'blues'; a morbid or whimsical state of feeling.</p>
+    </div>
+  </dd>
+  <dt class="accordion-trigger" tabindex="0">Giffgaff</dt>
+  <dd class="accordion-body hidden">
+    <div class="accordion-body-inner">
+      <i>n.</i> Mutual or reciprocal giving and taking; mutual obligation; tit for tat.
+    </div>
+  </dd>
+  <dt class="accordion-trigger" tabindex="0">Chawbacon</dt>
+  <dd class="accordion-body hidden">
+    <div class="accordion-body-inner">
+      <p><i>n.</i> A person who is not very intelligent or interested in culture.</p>
+      <blockquote>
+        I contend for it that all our civilisation is higher, and that class for class we are in a more advanced culture than the English; that your chawbacon is not as intelligent a being as our bogtrotter; that your petty shopkeeper is inferior to ours; that throughout our middle classes there is not only a higher morality but a higher refinement than with you.
+        Charles Lever, Lord Kilgobbin
+      </blockquote>
+    </div>
+  </dd>
+</dl>
+
+{% highlight js linenos %}
+{% include accordion.js %}
+{% endhighlight %}
+
+<h3>The dropdown menu</h3>
+
+<p>Demonstrating the following:</p>
+<ul>
+  <li>a custom CSS transition</li>
+  <li>a custom <code>openClass</code></li>
+  <li>how the plugin integrates into slightly more complicated JavaScript/jQuery activities</li>
+</ul>
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="javascript:void(0);" class="dropdown-trigger">About</a>
+    <ul class="dropdown-submenu hidden">
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Our Dogs</a></li>
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Our Science</a></li>
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Our Behavior</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="javascript:void(0);" class="dropdown-trigger">Because</a>
+    <ul class="dropdown-submenu hidden">
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Because it hurts</a></li>
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Because we like it</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="javascript:void(0);" class="dropdown-trigger">Directions</a>
+    <ul class="dropdown-submenu hidden">
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Forwards</a></li>
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Backwards</a></li>
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Sideways</a></li>
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Bothways</a></li>
+      <li><a href="javascript:void(0);" class="dropdown-submenu-i">Noways</a></li>
+    </ul>
+  </li>
+</ul>
+
+{% highlight js linenos %}
+{% include dropdown.js %}
+{% endhighlight %}
+
+<h3>The variable-height tabs</h3>

@@ -1,0 +1,95 @@
+%basic-trigger {
+  background-color: $c-primary;
+  border-bottom: 0;
+  color: $c-secondary;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  padding: 0.5em 1em;
+
+  transition: background-color 0.2s linear, color 0.2s linear;
+  @include scut-selected {
+    background-color: $c-tertiary;
+    color: white;
+  }
+}
+
+// accordion
+
+.accordion {
+  border: 0.2em solid $c-secondary;
+}
+
+.accordion-trigger {
+  @extend %basic-trigger;
+  border-top: 0.2em solid $c-secondary;
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:before {
+    content: "";
+    @include scut-triangle($color: $c-secondary);
+    margin-right: 0.5em;
+    transition: border-color 0.2s linear, transform 0.3s;
+    transform: rotate(0);
+  }
+
+  @include scut-selected {
+    &:before {
+      border-left-color: white;
+    }
+  }
+
+  &.is-active {
+    &:before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.accordion-body {
+  background-color: white;
+  color: $c-tertiary;
+  margin-left: 0;
+  max-width: 100%;
+}
+
+.accordion-body-inner {
+  padding: 1em;
+}
+
+
+// dropdown menu
+
+.dropdown-menu {
+  background-color: $c-primary;
+  @extend %scut-list-floated;
+}
+
+.dropdown-trigger {
+  display: block;
+  @extend %basic-trigger;
+  &.is-active {
+    background-color: $c-secondary;
+    color: $c-primary;
+  }
+}
+
+.dropdown-submenu {
+  position: absolute;
+  @extend %scut-list-unstyled;
+  .is-active + & {
+    z-index: 1;
+  }
+}
+
+.dropdown-submenu-i {
+  border-bottom: 0;
+  display: block;
+  padding: 0.5em 1em;
+  @include scut-selected {
+    background-color: white;
+    color: $c-tertiary;
+  }
+}
