@@ -1223,7 +1223,13 @@ button:focus,
   color: white;
 }
 
-/* line 31, ../scss/_base.scss */
+/* line 30, ../scss/_base.scss */
+
+.btn-2 {
+  background-color: #440344;
+}
+
+/* line 35, ../scss/_base.scss */
 
 h1,
 h2 {
@@ -1231,7 +1237,7 @@ h2 {
   background-color: #440344;
 }
 
-/* line 36, ../scss/_base.scss */
+/* line 40, ../scss/_base.scss */
 
 h1 {
   font-size: 2em;
@@ -1239,25 +1245,25 @@ h1 {
   padding-top: 1em;
 }
 
-/* line 42, ../scss/_base.scss */
+/* line 46, ../scss/_base.scss */
 
 h2 {
   margin-top: 2em;
 }
 
-/* line 46, ../scss/_base.scss */
+/* line 50, ../scss/_base.scss */
 
 p {
   line-height: 1.5;
 }
 
-/* line 48, ../scss/_base.scss */
+/* line 52, ../scss/_base.scss */
 
 p.btn-p {
   margin-bottom: 1em;
 }
 
-/* line 53, ../scss/_base.scss */
+/* line 57, ../scss/_base.scss */
 
 a {
   color: white;
@@ -1273,20 +1279,20 @@ a:focus {
   color: #b337b3;
 }
 
-/* line 63, ../scss/_base.scss */
+/* line 67, ../scss/_base.scss */
 
 blockquote {
   margin-left: 0;
   font-style: italic;
 }
 
-/* line 68, ../scss/_base.scss */
+/* line 72, ../scss/_base.scss */
 
 .feature {
   font-size: 1.3em;
 }
 
-/* line 72, ../scss/_base.scss */
+/* line 76, ../scss/_base.scss */
 
 .hidden {
   background-color: #38116d;
@@ -1295,20 +1301,27 @@ blockquote {
   max-width: 20em;
 }
 
-/* line 79, ../scss/_base.scss */
+/* line 83, ../scss/_base.scss */
+
+.hidden-code {
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 88, ../scss/_base.scss */
 
 .hidden-inner {
   padding: 2em;
 }
 
-/* line 83, ../scss/_base.scss */
+/* line 92, ../scss/_base.scss */
 
 .highlight {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-/* line 87, ../scss/_base.scss */
+/* line 96, ../scss/_base.scss */
 
 .well {
   background: #38116d;

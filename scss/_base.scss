@@ -27,6 +27,10 @@ button,
   }
 }
 
+.btn-2 {
+  background-color: $c-quarternary;
+}
+
 h1,
 h2 {
   padding: 0.5em;
@@ -74,6 +78,11 @@ blockquote {
   height: 0;
   overflow: hidden;
   max-width: 20em;
+}
+
+.hidden-code {
+  height: 0;
+  overflow: hidden;
 }
 
 .hidden-inner {
