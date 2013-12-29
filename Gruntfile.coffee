@@ -36,7 +36,7 @@ module.exports = (grunt) ->
       server:
         options:
           port: 9000
-          base: "./"
+          base: "./_site"
 
     watch:
       livereload:
