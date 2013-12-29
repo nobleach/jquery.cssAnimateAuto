@@ -658,10 +658,10 @@ p:last-of-type {
 p > code,
 p > a > code {
   border-radius: 4px;
-  color: #C5CBD0;
+  color: inherit;
   /*color: white*/
   font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
-  font-size: 1.1em;
+  font-size: 1em;
   /*height: 0px;
   image-rendering: auto;
   left: auto;
@@ -1182,8 +1182,8 @@ pre {
 /* line 1, ../scss/_base.scss */
 
 body {
-  background-color: #680868;
-  color: white;
+  background-color: white;
+  color: #4b4b4b;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   padding: 0 1em 10em;
@@ -1201,7 +1201,8 @@ body {
 
 button,
 .btn {
-  background-color: #b337b3;
+  background-color: #4b4b4b;
+  color: white;
   border-radius: 5px;
   display: inline-block;
   text-decoration: none;
@@ -1219,112 +1220,94 @@ button:hover,
 button:focus,
 .btn:hover,
 .btn:focus {
-  background-color: #8f0b33;
   color: white;
 }
 
-/* line 30, ../scss/_base.scss */
-
-.btn-2 {
-  background-color: #440344;
-}
-
-/* line 35, ../scss/_base.scss */
+/* line 31, ../scss/_base.scss */
 
 h1,
 h2 {
-  padding: 0.5em;
-  background-color: #440344;
+  padding-bottom: 0.3em;
+  border-bottom: 0.2em solid;
 }
 
-/* line 40, ../scss/_base.scss */
+/* line 36, ../scss/_base.scss */
 
 h1 {
   font-size: 2em;
-  margin-top: 0;
-  padding-top: 1em;
 }
 
-/* line 46, ../scss/_base.scss */
+/* line 40, ../scss/_base.scss */
 
 h2 {
   margin-top: 2em;
 }
 
-/* line 50, ../scss/_base.scss */
+/* line 44, ../scss/_base.scss */
 
 p {
   line-height: 1.5;
 }
 
-/* line 52, ../scss/_base.scss */
+/* line 46, ../scss/_base.scss */
 
 p.btn-p {
   margin-bottom: 1em;
 }
 
-/* line 57, ../scss/_base.scss */
+/* line 51, ../scss/_base.scss */
 
 a {
-  color: white;
+  color: inherit;
   font-weight: 800;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
 }
 
-/* line 506, ../bower_components/scut/dist/_scut.scss */
-
-a:hover,
-a:focus {
-  color: #b337b3;
-}
-
-/* line 67, ../scss/_base.scss */
+/* line 57, ../scss/_base.scss */
 
 blockquote {
   margin-left: 0;
   font-style: italic;
 }
 
-/* line 72, ../scss/_base.scss */
+/* line 62, ../scss/_base.scss */
 
 .feature {
   font-size: 1.3em;
 }
 
-/* line 76, ../scss/_base.scss */
+/* line 66, ../scss/_base.scss */
 
 .hidden {
-  background-color: #38116d;
+  background-color: #cfcfcf;
   height: 0;
   overflow: hidden;
   max-width: 20em;
 }
 
-/* line 83, ../scss/_base.scss */
+/* line 73, ../scss/_base.scss */
 
 .hidden-code {
   height: 0;
   overflow: hidden;
 }
 
-/* line 88, ../scss/_base.scss */
+/* line 78, ../scss/_base.scss */
 
 .hidden-inner {
   padding: 2em;
 }
 
-/* line 92, ../scss/_base.scss */
+/* line 82, ../scss/_base.scss */
 
 .highlight {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-/* line 96, ../scss/_base.scss */
+/* line 86, ../scss/_base.scss */
 
 .well {
-  background: #38116d;
+  background: #cfcfcf;
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 1em;
@@ -1334,46 +1317,34 @@ blockquote {
 
 .accordion-trigger,
 .dropdown-trigger {
-  background-color: #b337b3;
+  background-color: #4b4b4b;
   border-bottom: 0;
-  color: #38116d;
+  color: white;
   font-weight: bold;
   cursor: pointer;
   outline: none;
   padding: 0.5em 1em;
-  -webkit-transition: background-color 0.2s linear, color 0.2s linear;
-  transition: background-color 0.2s linear, color 0.2s linear;
 }
 
-/* line 506, ../bower_components/scut/dist/_scut.scss */
-
-.accordion-trigger:hover,
-.dropdown-trigger:hover,
-.accordion-trigger:focus,
-.dropdown-trigger:focus {
-  background-color: #8f0b33;
-  color: white;
-}
-
-/* line 19, ../scss/_use-cases.scss */
+/* line 13, ../scss/_use-cases.scss */
 
 .accordion {
-  border: 0.2em solid #38116d;
+  border: 0.2em solid #cfcfcf;
 }
 
-/* line 23, ../scss/_use-cases.scss */
+/* line 17, ../scss/_use-cases.scss */
 
 .accordion-trigger {
-  border-top: 0.2em solid #38116d;
+  border-top: 0.2em solid #cfcfcf;
 }
 
-/* line 26, ../scss/_use-cases.scss */
+/* line 20, ../scss/_use-cases.scss */
 
 .accordion-trigger:first-child {
   border-top: 0;
 }
 
-/* line 30, ../scss/_use-cases.scss */
+/* line 24, ../scss/_use-cases.scss */
 
 .accordion-trigger:before {
   content: "";
@@ -1384,23 +1355,16 @@ blockquote {
   border-width: 0.375em 0.75em;
   border-style: solid;
   border-color: transparent;
-  border-left-color: #38116d;
+  border-left-color: white;
   border-right-width: 0;
   margin-right: 0.5em;
-  -webkit-transition: border-color 0.2s linear, -webkit-transform 0.3s;
-  transition: border-color 0.2s linear, transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
 
-/* line 39, ../scss/_use-cases.scss */
-
-.accordion-trigger:hover:before,
-.accordion-trigger:focus:before {
-  border-left-color: white;
-}
-
-/* line 45, ../scss/_use-cases.scss */
+/* line 33, ../scss/_use-cases.scss */
 
 .accordion-trigger.is-active:before {
   -webkit-transform: rotate(90deg);
@@ -1408,64 +1372,56 @@ blockquote {
   transform: rotate(90deg);
 }
 
-/* line 51, ../scss/_use-cases.scss */
+/* line 39, ../scss/_use-cases.scss */
 
 .accordion-body {
   background-color: white;
-  color: #8f0b33;
   margin-left: 0;
   max-width: 100%;
 }
 
-/* line 58, ../scss/_use-cases.scss */
+/* line 45, ../scss/_use-cases.scss */
 
 .accordion-body-inner {
   padding: 1em;
 }
 
-/* line 65, ../scss/_use-cases.scss */
+/* line 52, ../scss/_use-cases.scss */
 
 .dropdown-menu {
-  background-color: #b337b3;
+  background-color: #4b4b4b;
 }
 
-/* line 70, ../scss/_use-cases.scss */
+/* line 57, ../scss/_use-cases.scss */
 
 .dropdown-trigger {
   display: block;
 }
 
-/* line 73, ../scss/_use-cases.scss */
+/* line 60, ../scss/_use-cases.scss */
 
 .dropdown-trigger.is-active {
-  background-color: #38116d;
-  color: #b337b3;
+  background-color: #cfcfcf;
+  color: #4b4b4b;
 }
 
-/* line 79, ../scss/_use-cases.scss */
+/* line 66, ../scss/_use-cases.scss */
 
 .dropdown-submenu {
+  background-color: #cfcfcf;
   position: absolute;
 }
 
-/* line 82, ../scss/_use-cases.scss */
+/* line 70, ../scss/_use-cases.scss */
 
 .is-active + .dropdown-submenu {
   z-index: 1;
 }
 
-/* line 87, ../scss/_use-cases.scss */
+/* line 75, ../scss/_use-cases.scss */
 
 .dropdown-submenu-i {
   border-bottom: 0;
   display: block;
   padding: 0.5em 1em;
-}
-
-/* line 506, ../bower_components/scut/dist/_scut.scss */
-
-.dropdown-submenu-i:hover,
-.dropdown-submenu-i:focus {
-  background-color: white;
-  color: #8f0b33;
 }

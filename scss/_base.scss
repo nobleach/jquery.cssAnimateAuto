@@ -1,6 +1,6 @@
 body {
-  background-color: $c-bg;
-  color: white;
+  background-color: $c-secondary;
+  color: $c-primary;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   padding: 0 1em 10em;
@@ -13,6 +13,7 @@ body {
 button,
 .btn {
   background-color: $c-primary;
+  color: $c-secondary;
   border-radius: 5px;
   display: inline-block;
   text-decoration: none;
@@ -22,25 +23,18 @@ button,
   margin-right: 1em;
   transition: background-color 0.2s linear;
   @include scut-selected {
-    background-color: $c-tertiary;
-    color: white;
+    color: $c-secondary;
   }
-}
-
-.btn-2 {
-  background-color: $c-quarternary;
 }
 
 h1,
 h2 {
-  padding: 0.5em;
-  background-color: $c-quarternary;
+  padding-bottom: 0.3em;
+  border-bottom: 0.2em solid;
 }
 
 h1 {
   font-size: 2em;
-  margin-top: 0;
-  padding-top: 1em;
 }
 
 h2 {
@@ -55,13 +49,9 @@ p {
 }
 
 a {
-  color: white;
+  color: inherit;
   font-weight: 800;
   @extend %scut-link-bb;
-  transition: color 0.2s linear;
-  @include scut-selected {
-    color: $c-primary;
-  }
 }
 
 blockquote {
@@ -74,7 +64,7 @@ blockquote {
 }
 
 .hidden {
-  background-color: $c-secondary;
+  background-color: $c-tertiary;
   height: 0;
   overflow: hidden;
   max-width: 20em;
@@ -94,7 +84,7 @@ blockquote {
 }
 
 .well {
-  background: $c-secondary;
+  background: $c-tertiary;
   @include scut-margin(1em n);
   padding: 1em;
 }

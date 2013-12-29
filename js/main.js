@@ -9,9 +9,9 @@ $('#btn-download').click(function() {
 });
 
 $('#see-code-accordion').click(function() {
-  $('#code-accordion').cssAnimateAuto();
+  $('#code-accordion').cssAnimateAuto('height 0.3s linear');
 });
 
 $('#see-code-dd').click(function() {
-  $('#code-dd').cssAnimateAuto();
+  $('#code-dd').cssAnimateAuto('height 0.3s linear');
 });

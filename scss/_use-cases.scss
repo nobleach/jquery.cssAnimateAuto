@@ -6,23 +6,17 @@
   cursor: pointer;
   outline: none;
   padding: 0.5em 1em;
-
-  transition: background-color 0.2s linear, color 0.2s linear;
-  @include scut-selected {
-    background-color: $c-tertiary;
-    color: white;
-  }
 }
 
 // accordion
 
 .accordion {
-  border: 0.2em solid $c-secondary;
+  border: 0.2em solid $c-tertiary;
 }
 
 .accordion-trigger {
   @extend %basic-trigger;
-  border-top: 0.2em solid $c-secondary;
+  border-top: 0.2em solid $c-tertiary;
   &:first-child {
     border-top: 0;
   }
@@ -31,14 +25,8 @@
     content: "";
     @include scut-triangle($color: $c-secondary);
     margin-right: 0.5em;
-    transition: border-color 0.2s linear, transform 0.3s;
+    transition: transform 0.3s;
     transform: rotate(0);
-  }
-
-  @include scut-selected {
-    &:before {
-      border-left-color: white;
-    }
   }
 
   &.is-active {
@@ -49,8 +37,7 @@
 }
 
 .accordion-body {
-  background-color: white;
-  color: $c-tertiary;
+  background-color: $c-secondary;
   margin-left: 0;
   max-width: 100%;
 }
@@ -71,12 +58,13 @@
   display: block;
   @extend %basic-trigger;
   &.is-active {
-    background-color: $c-secondary;
+    background-color: $c-tertiary;
     color: $c-primary;
   }
 }
 
 .dropdown-submenu {
+  background-color: $c-tertiary;
   position: absolute;
   @extend %scut-list-unstyled;
   .is-active + & {
@@ -88,8 +76,4 @@
   border-bottom: 0;
   display: block;
   padding: 0.5em 1em;
-  @include scut-selected {
-    background-color: white;
-    color: $c-tertiary;
-  }
 }
