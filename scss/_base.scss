@@ -21,7 +21,6 @@ button,
   font-weight: 800;
   padding: 0.75em 1em;
   margin-right: 1em;
-  transition: background-color 0.2s linear;
   @include scut-selected {
     color: $c-secondary;
   }
@@ -43,9 +42,6 @@ h2 {
 
 p {
   line-height: 1.5;
-  &.btn-p {
-    margin-bottom: 1em;
-  }
 }
 
 a {
@@ -85,6 +81,7 @@ blockquote {
 
 .well {
   background: $c-tertiary;
+  border-radius: 5px;
   @include scut-margin(1em n);
   padding: 1em;
 }

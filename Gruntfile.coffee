@@ -26,8 +26,7 @@ module.exports = (grunt) ->
           "bower_components/jquery/jquery.js"
           "jquery.cssAnimateAuto.js"
           "js/main.js"
-          "_includes/accordion.js"
-          "_includes/dropdown.js"
+          "_includes/*.js"
         ]
       plugin:
         files: "jquery.cssAnimateAuto.min.js": [

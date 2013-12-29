@@ -11,12 +11,12 @@
 // accordion
 
 .accordion {
-  border: 0.2em solid $c-tertiary;
+  border: 0.08em solid $c-tertiary;
 }
 
 .accordion-trigger {
   @extend %basic-trigger;
-  border-top: 0.2em solid $c-tertiary;
+  border-top: 0.08em solid $c-tertiary;
   &:first-child {
     border-top: 0;
   }
@@ -51,24 +51,26 @@
 
 .dropdown-menu {
   background-color: $c-primary;
-  @extend %scut-list-floated;
+  @extend %scut-list-unstyled;
+  @media only screen and (min-width: scut-em(400)) {
+    @include scut-list-floated;
+  }
 }
 
 .dropdown-trigger {
   display: block;
   @extend %basic-trigger;
-  &.is-active {
-    background-color: $c-tertiary;
-    color: $c-primary;
-  }
 }
 
 .dropdown-submenu {
   background-color: $c-tertiary;
-  position: absolute;
+  max-width: 100%;
   @extend %scut-list-unstyled;
-  .is-active + & {
-    z-index: 1;
+  @media only screen and (min-width: scut-em(400)) {
+    position: absolute;
+    .is-active + & {
+      z-index: 1;
+    }
   }
 }
 
@@ -76,4 +78,10 @@
   border-bottom: 0;
   display: block;
   padding: 0.5em 1em;
+  li:first-child > & {
+    padding-top: 1em;
+  }
+  li:last-child > & {
+    padding-bottom: 1em;
+  }
 }
