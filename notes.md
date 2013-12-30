@@ -1,6 +1,6 @@
 # Outline
 
 Use-cases and examples:
-- tabs shrinking and rising according to height
+- see (and hide) the JS
 
 Adjectives to describe this plugin

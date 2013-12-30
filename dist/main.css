@@ -1201,7 +1201,14 @@ button:focus,
   color: #f3f3f3;
 }
 
-/* line 30, ../scss/_base.scss */
+/* line 27, ../scss/_base.scss */
+
+button[disabled],
+.btn[disabled] {
+  background-color: #cfcfcf;
+}
+
+/* line 33, ../scss/_base.scss */
 
 h1,
 h2 {
@@ -1209,45 +1216,45 @@ h2 {
   border-bottom: 0.2em solid;
 }
 
-/* line 35, ../scss/_base.scss */
+/* line 38, ../scss/_base.scss */
 
 h1 {
   font-size: 2em;
 }
 
-/* line 39, ../scss/_base.scss */
+/* line 42, ../scss/_base.scss */
 
 h2 {
   margin-top: 2em;
 }
 
-/* line 43, ../scss/_base.scss */
+/* line 46, ../scss/_base.scss */
 
 p {
   line-height: 1.5;
 }
 
-/* line 47, ../scss/_base.scss */
+/* line 50, ../scss/_base.scss */
 
 a {
   color: inherit;
   font-weight: 800;
 }
 
-/* line 53, ../scss/_base.scss */
+/* line 56, ../scss/_base.scss */
 
 blockquote {
   margin-left: 0;
   font-style: italic;
 }
 
-/* line 58, ../scss/_base.scss */
+/* line 61, ../scss/_base.scss */
 
 .feature {
   font-size: 1.3em;
 }
 
-/* line 62, ../scss/_base.scss */
+/* line 65, ../scss/_base.scss */
 
 .hidden {
   background-color: #cfcfcf;
@@ -1256,27 +1263,27 @@ blockquote {
   max-width: 20em;
 }
 
-/* line 69, ../scss/_base.scss */
+/* line 72, ../scss/_base.scss */
 
 .hidden-code {
   height: 0;
   overflow: hidden;
 }
 
-/* line 74, ../scss/_base.scss */
+/* line 77, ../scss/_base.scss */
 
 .hidden-inner {
   padding: 2em;
 }
 
-/* line 78, ../scss/_base.scss */
+/* line 81, ../scss/_base.scss */
 
 .highlight {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-/* line 82, ../scss/_base.scss */
+/* line 85, ../scss/_base.scss */
 
 .well {
   background: #cfcfcf;
@@ -1397,7 +1404,7 @@ blockquote {
 /* line 65, ../scss/_use-cases.scss */
 
 .dropdown-submenu {
-  background-color: #cfcfcf;
+  background-color: #242424;
   max-width: 100%;
 }
 
@@ -1418,18 +1425,19 @@ blockquote {
 /* line 77, ../scss/_use-cases.scss */
 
 .dropdown-submenu-i {
+  color: #f3f3f3;
   border-bottom: 0;
   display: block;
   padding: 0.5em 1em;
 }
 
-/* line 81, ../scss/_use-cases.scss */
+/* line 82, ../scss/_use-cases.scss */
 
 li:first-child > .dropdown-submenu-i {
   padding-top: 1em;
 }
 
-/* line 84, ../scss/_use-cases.scss */
+/* line 85, ../scss/_use-cases.scss */
 
 li:last-child > .dropdown-submenu-i {
   padding-bottom: 1em;

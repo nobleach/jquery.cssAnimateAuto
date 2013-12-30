@@ -1,6 +1,6 @@
-<h2>Use-cases and examples</h2>
+<h2>Use-Cases and Examples</h2>
 
-<h3>The accordion</h3>
+<h3>The Accordion</h3>
 
 <dl class="accordion">
   <dt class="accordion-trigger" tabindex="0">Megrim</dt>
@@ -28,7 +28,8 @@
   </dd>
 </dl>
 
-<button id="see-code-accordion">See the JS</button>
+<button id="open-code-accordion" class="open-code" data-code="accordion">Show the JS</button>
+<button id="close-code-accordion" class="close-code" data-code="accordion" disabled>Hide the JS</button>
 
 <div id="code-accordion" class="hidden-code">
 {% highlight js linenos %}
@@ -36,7 +37,7 @@
 {% endhighlight %}
 </div>
 
-<h3>The dropdown menu</h3>
+<h3>The Dropdown Menu</h3>
 
 <p>Demonstrating the following:</p>
 <ul>
@@ -77,10 +78,26 @@
   </li>
 </ul>
 
-<button id="see-code-dd">See the JS</button>
+<button id="open-code-dd" class="open-code" data-code="dd">Show the JS</button>
+<button id="close-code-dd" class="close-code" data-code="dd" disabled>Hide the JS</button>
 
 <div id="code-dd" class="hidden-code">
 {% highlight js linenos %}
 {% include dropdown.js %}
+{% endhighlight %}
+</div>
+
+<h3>These See/Hide the JS Buttons</h3>
+
+<p>How do they work? Have a look. They use a callback to disable the button once the transition/animation is complete.</p>
+
+<p>
+  <button id="open-code-showhide" class="open-code" data-code="showhide">Show the JS</button>
+  <button id="close-code-showhide" class="close-code" data-code="showhide" disabled>Hide the JS</button>
+</p>
+
+<div id="code-showhide" class="hidden-code">
+{% highlight js linenos %}
+{% include show-hide-code.js %}
 {% endhighlight %}
 </div>
