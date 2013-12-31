@@ -1,0 +1,24 @@
+<h3>Basic</h3>
+
+<p><button id="basic-height-btn">Height</button></p>
+<div id="basic-height-content" class="hidden">
+  <div class="hidden-inner">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+  </div>
+</div>
+
+<p><button id="basic-width-btn">Width</button></p>
+<div id="basic-width-content" class="hidden-width">
+  <div class="hidden-inner">
+    <div class="width-hidden-inner">And so it grows rightwards.</div>
+  </div>
+</div>
+
+<button id="open-code-basic" class="open-code" data-code="basic">Show the JS</button>
+<button id="close-code-basic" class="close-code" data-code="basic" disabled>Hide the JS</button>
+
+<div id="code-basic" class="hidden-code">
+{% highlight js linenos %}
+{% include basic.js %}
+{% endhighlight %}
+</div>

@@ -1,0 +1,14 @@
+<h3>These Show/Hide the JS Buttons</h3>
+
+<p>How do they work? Have a look. They use a callback to disable the button once the transition/animation is complete.</p>
+
+<p>
+  <button id="open-code-showhide" class="open-code" data-code="showhide">Show the JS</button>
+  <button id="close-code-showhide" class="close-code" data-code="showhide" disabled>Hide the JS</button>
+</p>
+
+<div id="code-showhide" class="hidden-code">
+{% highlight js linenos %}
+{% include show-hide-code.js %}
+{% endhighlight %}
+</div>

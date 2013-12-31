@@ -54,6 +54,9 @@
   @extend %scut-list-unstyled;
   @media only screen and (min-width: scut-em(400)) {
     @include scut-list-floated;
+    & > li {
+      position: relative;
+    }
   }
 }
 
@@ -63,11 +66,13 @@
 }
 
 .dropdown-submenu {
-  background-color: $c-primary;
-  max-width: 100%;
+  background-color: darken($c-tertiary, 20);
   @extend %scut-list-unstyled;
   @media only screen and (min-width: scut-em(400)) {
     position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10em;
     .is-active + & {
       z-index: 1;
     }
@@ -75,7 +80,7 @@
 }
 
 .dropdown-submenu-i {
-  color: $c-secondary;
+  color: $c-primary;
   border-bottom: 0;
   display: block;
   padding: 0.5em 1em;

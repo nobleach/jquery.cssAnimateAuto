@@ -66,20 +66,32 @@ blockquote {
   background-color: $c-tertiary;
   height: 0;
   overflow: hidden;
-  max-width: 20em;
+}
+
+.hidden-width {
+  background-color: $c-tertiary;
+  width: 0;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.width-hidden-inner {
+  @include scut-vcenter-lh(3em);
+  width: 20em;
+}
+
+.highlight {
+  margin: 0;
 }
 
 .hidden-code {
+  margin-top: 1em;
   height: 0;
   overflow: hidden;
 }
 
 .hidden-inner {
   padding: 2em;
-}
-
-.highlight {
-  @include scut-margin(1em n);
 }
 
 .well {

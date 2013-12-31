@@ -16,7 +16,7 @@
  * Corrects `block` display not defined in IE 8/9.
  */
 
-/* line 31, ../bower_components/normalize-scss/_normalize.scss */
+/* line 20, ../bower_components/normalize-scss/_normalize.scss */
 
 article,
 aside,
@@ -37,7 +37,7 @@ summary {
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
 
-/* line 41, ../bower_components/normalize-scss/_normalize.scss */
+/* line 39, ../bower_components/normalize-scss/_normalize.scss */
 
 audio,
 canvas,
@@ -167,7 +167,7 @@ abbr[title] {
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
 
-/* line 185, ../bower_components/normalize-scss/_normalize.scss */
+/* line 184, ../bower_components/normalize-scss/_normalize.scss */
 
 b,
 strong {
@@ -216,7 +216,7 @@ mark {
  * Correct font family set oddly in Safari 5 and Chrome.
  */
 
-/* line 240, ../bower_components/normalize-scss/_normalize.scss */
+/* line 237, ../bower_components/normalize-scss/_normalize.scss */
 
 code,
 kbd,
@@ -260,7 +260,7 @@ small {
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
 
-/* line 297, ../bower_components/normalize-scss/_normalize.scss */
+/* line 296, ../bower_components/normalize-scss/_normalize.scss */
 
 sub,
 sup {
@@ -360,7 +360,7 @@ legend {
  * 4. Improves appearance and consistency in all browsers.
  */
 
-/* line 431, ../bower_components/normalize-scss/_normalize.scss */
+/* line 428, ../bower_components/normalize-scss/_normalize.scss */
 
 button,
 input,
@@ -379,7 +379,7 @@ textarea {
  * the UA stylesheet.
  */
 
-/* line 447, ../bower_components/normalize-scss/_normalize.scss */
+/* line 446, ../bower_components/normalize-scss/_normalize.scss */
 
 button,
 input {
@@ -393,7 +393,7 @@ input {
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
 
-/* line 459, ../bower_components/normalize-scss/_normalize.scss */
+/* line 458, ../bower_components/normalize-scss/_normalize.scss */
 
 button,
 select {
@@ -410,7 +410,7 @@ select {
  *    Known issue: inner spacing remains in IE 6.
  */
 
-/* line 476, ../bower_components/normalize-scss/_normalize.scss */
+/* line 473, ../bower_components/normalize-scss/_normalize.scss */
 
 button,
 html input[type="button"],
@@ -426,7 +426,7 @@ input[type="submit"] {
  * Re-set default cursor for disabled elements.
  */
 
-/* line 489, ../bower_components/normalize-scss/_normalize.scss */
+/* line 488, ../bower_components/normalize-scss/_normalize.scss */
 
 button[disabled],
 html input[disabled] {
@@ -439,7 +439,7 @@ html input[disabled] {
  *    Known issue: excess padding remains in IE 6.
  */
 
-/* line 500, ../bower_components/normalize-scss/_normalize.scss */
+/* line 499, ../bower_components/normalize-scss/_normalize.scss */
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -473,7 +473,7 @@ input[type="search"] {
  * on OS X.
  */
 
-/* line 528, ../bower_components/normalize-scss/_normalize.scss */
+/* line 527, ../bower_components/normalize-scss/_normalize.scss */
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
@@ -484,7 +484,7 @@ input[type="search"]::-webkit-search-decoration {
  * Remove inner padding and border in Firefox 4+.
  */
 
-/* line 537, ../bower_components/normalize-scss/_normalize.scss */
+/* line 536, ../bower_components/normalize-scss/_normalize.scss */
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -559,7 +559,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 419, ../bower_components/scut/dist/_scut.scss */
+/* line 416, ../bower_components/scut/dist/_scut.scss */
 
 label,
 select,
@@ -633,7 +633,7 @@ p:last-of-type {
   border-radius: 5px;
 }
 
-/* line 15, ../scss/_syntax-highlighting.scss */
+/* line 14, ../scss/_syntax-highlighting.scss */
 
 p > code,
 p > a > code {
@@ -657,7 +657,7 @@ p > a > code {
   top: auto;
 }
 
-/* line 38, ../scss/_syntax-highlighting.scss */
+/* line 37, ../scss/_syntax-highlighting.scss */
 
 p > a > code {
   color: #95be7d;
@@ -674,7 +674,7 @@ pre {
   white-space: pre;
 }
 
-/* line 51, ../scss/_syntax-highlighting.scss */
+/* line 50, ../scss/_syntax-highlighting.scss */
 
 .highlight span {
   font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
@@ -1177,7 +1177,7 @@ body {
   max-width: 40em;
 }
 
-/* line 14, ../scss/_base.scss */
+/* line 13, ../scss/_base.scss */
 
 button,
 .btn {
@@ -1192,7 +1192,7 @@ button,
   margin-right: 1em;
 }
 
-/* line 506, ../bower_components/scut/dist/_scut.scss */
+/* line 505, ../bower_components/scut/dist/_scut.scss */
 
 button:hover,
 button:focus,
@@ -1208,7 +1208,7 @@ button[disabled],
   background-color: #cfcfcf;
 }
 
-/* line 33, ../scss/_base.scss */
+/* line 32, ../scss/_base.scss */
 
 h1,
 h2 {
@@ -1260,30 +1260,46 @@ blockquote {
   background-color: #cfcfcf;
   height: 0;
   overflow: hidden;
-  max-width: 20em;
 }
 
-/* line 72, ../scss/_base.scss */
+/* line 71, ../scss/_base.scss */
+
+.hidden-width {
+  background-color: #cfcfcf;
+  width: 0;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+/* line 78, ../scss/_base.scss */
+
+.width-hidden-inner {
+  height: 3em;
+  line-height: 3em;
+  width: 20em;
+}
+
+/* line 83, ../scss/_base.scss */
+
+.highlight {
+  margin: 0;
+}
+
+/* line 87, ../scss/_base.scss */
 
 .hidden-code {
+  margin-top: 1em;
   height: 0;
   overflow: hidden;
 }
 
-/* line 77, ../scss/_base.scss */
+/* line 93, ../scss/_base.scss */
 
 .hidden-inner {
   padding: 2em;
 }
 
-/* line 81, ../scss/_base.scss */
-
-.highlight {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-/* line 85, ../scss/_base.scss */
+/* line 97, ../scss/_base.scss */
 
 .well {
   background: #cfcfcf;
@@ -1393,51 +1409,59 @@ blockquote {
   .dropdown-menu > li {
     float: left;
   }
+
+  /* line 57, ../scss/_use-cases.scss */
+
+  .dropdown-menu > li {
+    position: relative;
+  }
 }
 
-/* line 60, ../scss/_use-cases.scss */
+/* line 63, ../scss/_use-cases.scss */
 
 .dropdown-trigger {
   display: block;
 }
 
-/* line 65, ../scss/_use-cases.scss */
+/* line 68, ../scss/_use-cases.scss */
 
 .dropdown-submenu {
-  background-color: #242424;
-  max-width: 100%;
+  background-color: #9c9c9c;
 }
 
 @media only screen and (min-width: 25em) {
-  /* line 65, ../scss/_use-cases.scss */
+  /* line 68, ../scss/_use-cases.scss */
 
   .dropdown-submenu {
     position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10em;
   }
 
-  /* line 71, ../scss/_use-cases.scss */
+  /* line 76, ../scss/_use-cases.scss */
 
   .is-active + .dropdown-submenu {
     z-index: 1;
   }
 }
 
-/* line 77, ../scss/_use-cases.scss */
+/* line 82, ../scss/_use-cases.scss */
 
 .dropdown-submenu-i {
-  color: #f3f3f3;
+  color: #242424;
   border-bottom: 0;
   display: block;
   padding: 0.5em 1em;
 }
 
-/* line 82, ../scss/_use-cases.scss */
+/* line 87, ../scss/_use-cases.scss */
 
 li:first-child > .dropdown-submenu-i {
   padding-top: 1em;
 }
 
-/* line 85, ../scss/_use-cases.scss */
+/* line 90, ../scss/_use-cases.scss */
 
 li:last-child > .dropdown-submenu-i {
   padding-bottom: 1em;
