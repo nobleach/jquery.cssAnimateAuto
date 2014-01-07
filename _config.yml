@@ -1,1 +1,1 @@
-exclude: [bower_components, node_modules, js, scss, .sass-cache, Gruntfile.coffee, bower.json, package.json]
+exclude: [bower_components, node_modules, scss, .sass-cache, Gruntfile.coffee, bower.json, package.json]
