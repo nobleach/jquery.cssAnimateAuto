@@ -1,4 +1,7 @@
 module.exports = (grunt) ->
+
+  require("load-grunt-tasks")(grunt)
+
   grunt.initConfig
 
     pkg: grunt.file.readJSON "package.json"
@@ -7,13 +10,22 @@ module.exports = (grunt) ->
       options:
         style: "compressed"
       style:
-        files:
-          "main.css": "scss/main.scss"
+        src: "scss/main.scss"
+        dest: "main.css"
 
     autoprefixer:
       style:
         files:
-          "main.css": "main.css"
+          "<%= sass.style.dest %>": "<%= sass.style.dest %>"
+
+    uncss:
+      dist:
+        files:
+          "<%= sass.style.dest %>": "_site/index.html"
+
+    cssmin:
+      dist:
+        files: "<%= autoprefixer.style.files %>"
 
     concat:
       includedjs:
@@ -36,9 +48,11 @@ module.exports = (grunt) ->
       livereload:
         options:
           livereload: true
+          debounce: 2000
         files: [
           "index.html"
           "_includes/*"
+          "main.css"
         ]
         tasks: [
           "shell:jekyll"
@@ -46,13 +60,6 @@ module.exports = (grunt) ->
       style:
         files: ["scss/*.scss"]
         tasks: ["style"]
-
-  grunt.loadNpmTasks "grunt-contrib-connect"
-  grunt.loadNpmTasks "grunt-contrib-watch"
-  grunt.loadNpmTasks "grunt-contrib-sass"
-  grunt.loadNpmTasks "grunt-contrib-concat"
-  grunt.loadNpmTasks "grunt-autoprefixer"
-  grunt.loadNpmTasks "grunt-shell"
 
   grunt.registerTask "dev", [
     "shell:getPlugin"
@@ -63,4 +70,11 @@ module.exports = (grunt) ->
   grunt.registerTask "style", [
     "sass:style"
     "autoprefixer:style"
+  ]
+
+  grunt.registerTask "build", [
+    "style"
+    "uncss:dist"
+    "cssmin:dist"
+    "shell:jekyll"
   ]
