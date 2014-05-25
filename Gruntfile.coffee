@@ -51,7 +51,7 @@ module.exports = (grunt) ->
           debounce: 2000
         files: [
           "index.html"
-          "_includes/*"
+          "_includes/*.html"
           "main.css"
         ]
         tasks: [
@@ -60,6 +60,12 @@ module.exports = (grunt) ->
       style:
         files: ["scss/*.scss"]
         tasks: ["style"]
+      js:
+        files: ["_includes/*.js"]
+        tasks: [
+          "concat:includedjs"
+          "shell:jekyll"
+        ]
 
   grunt.registerTask "dev", [
     "shell:getPlugin"
