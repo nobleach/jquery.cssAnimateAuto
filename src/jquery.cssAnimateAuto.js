@@ -1,3 +1,8 @@
+ /*
+* jquery.cssAnimateAuto - https://github.com/davidtheclark/jquery.cssAnimateAuto
+* Copyright 2014, David Clark
+* Released under the MIT license, 2014-05-19T21:03:39
+*/
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(factory);
