@@ -64,7 +64,8 @@
             $el.css('transition', settings.transition)
             // set listener for transitionend
             .on(namespaceEvent(transEnd), function(e) {
-                if (e.originalEvent.propertyName === dimension) {
+                var originalEvent = e.originalEvent || e;
+                if (originalEvent.propertyName === dimension) {
                     afterTransition();
                 }
             })
@@ -79,7 +80,16 @@
             setTimeout(fallbackFinisher, transTime);
         }
 
+        function getTargetDimensionFunctionName() {
+            var dimensionFunction = dimension.charAt(0)
+                .toUpperCase();
+            dimensionFunction = 'outer' + dimensionFunction + dimension.substr(1);
+
+            return dimensionFunction;
+        }
+
         function getTargetDimension($el) {
+            var targetDimensionFunction = getTargetDimensionFunctionName();
             // Create a hidden clone of $el, appended to
             // $el's parent and with $el's `oppositeDimension`,
             // to ensure it will have dimensions tailored to
@@ -93,12 +103,13 @@
             .appendTo($el.parent());
             var cloneContentDimension = $clone
             .css(dimension, 'auto')
-            .css(dimension);
+            [targetDimensionFunction].call($clone, true);
             $clone.remove();
             return cloneContentDimension;
         }
 
         function openEl($el) {
+            var targetDimension = getTargetDimension($el);
             // Create a transition, with things to do
             // when the transition ends, then change
             // the dimension.
@@ -107,18 +118,19 @@
                 $el.css(dimension, 'auto');
                 $el.addClass(settings.openClass);
             });
-            $el.css(dimension, getTargetDimension($el));
+            $el.css(dimension, targetDimension);
         }
 
         function closeEl($el) {
+            var targetDimensionFunction = getTargetDimensionFunctionName();
             // If there is a 'to' setting, we will go to that;
             // otherwise, will go to nothing.
             var to = (settings.to) ? settings.to : '';
-            // Set the dimension to a number (it's current state
+            // Set the dimension to a number (its current state
             // is probably `auto`); then create a transition,
             // with things to do when the transition ends, and
             // change the dimension.
-            $el.css(dimension, $el.css(dimension));
+            $el.css(dimension, $el[targetDimensionFunction].call($el, true));
             // Force repaint (http://n12v.com/css-transition-to-from-auto/)
             $el[0].offsetHeight;
             createTransition($el, function(e) {
